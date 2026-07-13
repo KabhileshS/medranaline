@@ -11,13 +11,6 @@ const config: Config = {
   ],
   prefix: "",
   theme: {
-    container: {
-      center: true,
-      padding: "2rem",
-      screens: {
-        "2xl": "1400px",
-      },
-    },
     extend: {
       colors: {
         border: "hsl(var(--border))",
@@ -53,55 +46,18 @@ const config: Config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        "violet-light": "hsl(var(--violet-light))",
-        "violet-pastel": "hsl(var(--violet-pastel))",
-      },
-      backgroundImage: {
-        "gradient-primary": "var(--gradient-primary)",
-        "gradient-accent": "var(--gradient-accent)",
-        "gradient-hero": "var(--gradient-hero)",
-        "gradient-light": "var(--gradient-light)",
       },
       boxShadow: {
-        glow: "var(--shadow-glow)",
-        elegant: "var(--shadow-elegant)",
+        'sonic-neon': '0 0 15px rgba(217, 70, 239, 0.7), inset 0 2px 4px rgba(255, 255, 255, 0.4)',
+        'retro-solid': '0 6px 0px #701a75, 0 10px 0px #0f172a',
+        'panel-retro': '0 0 0 4px #1e293b, 0 10px 0 #0f172a',
       },
-      fontFamily: {
-        ethnocentric: ["Ethnocentric", "sans-serif"], // ✅ fixed spelling
-        "fopi-rush": ["Fopi Rush", "sans-serif"],
-        konspiracy: ["Konspiracy Theory", "serif"],
-      },
-      transitionTimingFunction: {
-        smooth: "cubic-bezier(0.4, 0, 0.2, 1)",
-        bounce: "cubic-bezier(0.68, -0.55, 0.265, 1.55)",
-      },
-      borderRadius: {
-        lg: "var(--radius)",
-        md: "calc(var(--radius) - 2px)",
-        sm: "calc(var(--radius) - 4px)",
-      },
-      keyframes: {
-        "accordion-down": {
-          from: { height: "0" },
-          to: { height: "var(--radix-accordion-content-height)" },
-        },
-        "accordion-up": {
-          from: { height: "var(--radix-accordion-content-height)" },
-          to: { height: "0" },
-        },
-        "scroll-x": {
-          "0%": { transform: "translateX(0)" },
-          "100%": { transform: "translateX(-50%)" },
-        },
-      },
-      animation: {
-        "accordion-down": "accordion-down 0.2s ease-out",
-        "accordion-up": "accordion-up 0.2s ease-out",
-        "scroll-x": "scroll-x 20s linear infinite",
-      },
-    },
+      textShadow: {
+        'sonic-gold': '3px 3px 0px #b91c1c, 6px 6px 0px #1e3a8a',
+      }
+    }
   },
-  plugins: [animatePlugin], // ✅ fixed require issue
+  plugins: [animatePlugin],
 };
 
 export default config;

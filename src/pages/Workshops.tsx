@@ -22,29 +22,28 @@ const WorkshopPage = () => {
   }, []);
 
   return (
-    <div className="relative min-h-screen text-slate-900">
+    <div className="relative min-h-screen text-slate-100">
       {/* Navbar */}
       <div className="relative z-[2000]">
         <Navigation />
       </div>
 
       {/* Particles */}
-      <div className="fixed inset-0 z-[1000] pointer-events-none">
+      <div className="fixed inset-0 z-[-10] pointer-events-none">
         <ParticlesBackground />
       </div>
 
       {/* Page Content */}
-      <main className="relative z-10">
+      <main className="relative z-[100]">
         {/* Title Section */}
         <section className="pt-28 pb-10 text-center">
           <h1
-            className="text-3xl md:text-4xl font-extrabold mb-4 tracking-wide 
-                       bg-gradient-to-r from-violet-600 to-yellow-500 bg-clip-text text-transparent"
+            className="text-3xl md:text-5xl font-extrabold mb-4 tracking-wide text-yellow-300"
           >
-            Medrenaline’25 Workshops
+            Workshop Worlds
           </h1>
-          <p className="text-base md:text-lg max-w-2xl mx-auto text-slate-700">
-            Click on a workshop card for details and registration.
+          <p className="text-2xl max-w-2xl mx-auto text-cyan-100" style={{ fontFamily: "VT323, monospace" }}>
+            Enter a quest card to view details and unlock registration.
           </p>
         </section>
 
@@ -56,13 +55,13 @@ const WorkshopPage = () => {
               <div
                 key={ws.id}
                 onClick={() => setSelectedWorkshop(ws)}
-                className="relative rounded-2xl overflow-hidden shadow-lg transform transition duration-300 hover:-translate-y-2 hover:scale-105 hover:shadow-2xl cursor-pointer"
+                className="retro-event-card relative overflow-hidden transform transition duration-300 hover:-translate-y-2 hover:scale-105 cursor-pointer"
               >
                 {/* Background Image */}
                 <img
                   src={ws.image || "/placeholder.svg"}
                   alt={ws.title}
-                  className="w-full h-64 object-cover"
+                  className="w-full h-64 object-cover retro-pixel-image"
                 />
                 <div className="absolute inset-0 bg-black/40"></div>
                 <div className="absolute inset-0 flex flex-col justify-center p-4 text-center text-white">
@@ -79,12 +78,12 @@ const WorkshopPage = () => {
               <div
                 key={ws.id}
                 onClick={() => setSelectedWorkshop(ws)}
-                className="relative rounded-2xl overflow-hidden shadow-lg transform transition duration-300 hover:-translate-y-2 hover:scale-105 hover:shadow-2xl cursor-pointer w-full sm:w-1/2 md:w-1/3 lg:w-1/4"
+                className="retro-event-card relative overflow-hidden transform transition duration-300 hover:-translate-y-2 hover:scale-105 cursor-pointer w-full sm:w-1/2 md:w-1/3 lg:w-1/4"
               >
                 <img
                   src={ws.image || "/placeholder.svg"}
                   alt={ws.title}
-                  className="w-full h-64 object-cover"
+                  className="w-full h-64 object-cover retro-pixel-image"
                 />
                 <div className="absolute inset-0 bg-black/40"></div>
                 <div className="absolute inset-0 flex flex-col justify-center p-4 text-center text-white">

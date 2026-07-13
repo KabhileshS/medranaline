@@ -2,8 +2,8 @@
   "workshops": [
     {
       "id": "spectrum-visus",
-      "title": "SPECTRUM VISUS",
-      "subtitle": "OPHTHALMOLOGY WORKSHOP",
+      "title": "PIXEL VISION QUEST",
+      "subtitle": "8-BIT OPHTHALMOLOGY LAB",
       "conductedBy": "DEPT OF OPHTHALMOLOGY, GKMCH",
       "date": "26/9/25, Friday",
       "time": "9:00 AM to 1:00 PM",
@@ -32,8 +32,8 @@
     },
     {
       "id": "correctio-skeleti",
-      "title": "CORRECTIO SKELETI",
-      "subtitle": "ORTHOPAEDICS WORKSHOP",
+      "title": "BONESTORM ARCADE",
+      "subtitle": "RETRO ORTHO REPAIR LAB",
       "conductedBy": "DEPT OF ORTHOPAEDICS, GKMCH",
       "date": "26th September 2025, Friday",
       "time": "9:00 AM TO 2:00 PM",
@@ -51,8 +51,8 @@
     },
     {
       "id": "circulus-sanguinis",
-      "title": "CIRCULUS SANGUINIS",
-      "subtitle": "CARDIOLOGY WORKSHOP",
+      "title": "HEARTBEAT HERO MODE",
+      "subtitle": "CARDIO COMBO WORKSHOP",
       "conductedBy": "DEPT OF CARDIOLOGY, GKMCH",
       "date": "26/09/2025, Friday",
       "time": "8:30 AM - 4:00 PM",
@@ -69,8 +69,8 @@
     },
     {
       "id": "systema-nervosum",
-      "title": "SYSTEMA NERVOSUM",
-      "subtitle": "NEUROSURGERY WORKSHOP",
+      "title": "NERVOUS NEXUS 64",
+      "subtitle": "NEUROSURGERY BOSS STAGE",
       "conductedBy": "DEPT OF NEUROSURGERY, GKMCH",
       "date": "27/09/2025, Saturday",
       "time": "9:00 AM TO 1:00 PM",
@@ -86,8 +86,8 @@
     },
     {
       "id": "ars-chirurgica",
-      "title": "ARS CHIRURGICA",
-      "subtitle": "SURGERY WORKSHOP",
+      "title": "SUTURE STRIKE",
+      "subtitle": "SURGERY SPEEDRUN LAB",
       "conductedBy": "DEPT OF GENERAL SURGERY, GKMCH",
       "date": "26/09/25, Friday",
       "time": "8:30 AM - 4:30 PM",
@@ -103,8 +103,8 @@
     },
     {
       "id": "vita-nova",
-      "title": "VITA NOVA",
-      "subtitle": "OBSTETRIC & GYNAECOLOGY WORKSHOP",
+      "title": "LIFE QUEST DX",
+      "subtitle": "OBG MISSION WORKSHOP",
       "conductedBy": "DEPT OF OBSTETRICS AND GYNAECOLOGY, GKMCH",
       "date": "28th September 2025, Sunday",
       "time": "9:00 AM to 5:00 PM",
@@ -120,8 +120,8 @@
     },
     {
       "id": "in-labyrinthus",
-      "title": "IN LABYRINTHUM",
-      "subtitle": "ENT WORKSHOP",
+      "title": "ECHO CAVERN RUN",
+      "subtitle": "ENT MAZE WORKSHOP",
       "conductedBy": "DEPT OF OTORHINOLARYNGOLOGY, GKMCH",
       "date": "27/9/2025, Saturday",
       "time": "9:30 AM to 1:00 PM",
@@ -138,8 +138,8 @@
     },
     {
       "id": "disciplina-ventris",
-      "title": "GASTRUM EXPLORARE",
-      "subtitle": "GASTROENTEROLOGY WORKSHOP",
+      "title": "GUT GALAXY SCAN",
+      "subtitle": "GASTRO EXPLORER WORKSHOP",
       "conductedBy": "DEPT OF MEDICAL GASTROENTEROLOGY, GKMCH",
       "date": "26/09/2025, Friday",
       "time": "9:00 AM – 3:00 PM",
@@ -178,8 +178,8 @@
     },
     {
       "id": "mitis-toxica",
-      "title": "MITIS TOXICA",
-      "subtitle": "TOXICOLOGY WORKSHOP",
+      "title": "TOXIC DUNGEON ESCAPE",
+      "subtitle": "TOXICOLOGY SURVIVAL WORKSHOP",
       "conductedBy": "DEPT OF GENERAL MEDICINE, GKMCH",
       "date": "26/09/25, Friday",
       "time": "9:00 AM - 4:00 PM",
@@ -196,8 +196,8 @@
     },
     {
       "id": "cura-paediatricia",
-      "title": "CURA PAEDIATRICIA",
-      "subtitle": "PAEDIATRICS WORKSHOP",
+      "title": "MINI MED HEROES",
+      "subtitle": "PEDIATRIC RESPONSE WORKSHOP",
       "conductedBy": "DEPT OF PAEDIATRICS, GKMCH",
       "date": "26/9/25, Friday",
       "time": "08:30 AM to 04:00 PM",
@@ -214,8 +214,8 @@
     },
     {
       "id": "flamma-reficit",
-      "title": "FLAMMA REFICIT",
-      "subtitle": "BURNS & PLASTIC RECONSTRUCTIVE SURGERY WORKSHOP",
+      "title": "PHOENIX PATCHWORK",
+      "subtitle": "BURNS AND RECON WORKSHOP",
       "conductedBy": "DEPT OF BURNS, RECONSTRUCTIVE AND PLASTIC SURGERY, GKMCH",
       "date": "27/9/25, Saturday",
       "time": "9:00 AM to 2:00 PM",
@@ -233,7 +233,7 @@
     },
     {
       "id": "medicina-veloce",
-      "title": "MEDICINA VELOCE",
+      "title": "CODE BLUE RACER",
       "subtitle": "EMERGENCY MEDICINE WORKSHOP",
       "conductedBy": "DEPARTMENT OF EMERGENCY MEDICINE, GKMCH",
       "date": "26/9/25, Friday",
@@ -251,8 +251,8 @@
     },
     {
       "id": "colloquium-psychiatrium",
-      "title": "COLLOQUIUM PSYCHIATRIUM",
-      "subtitle": "PSYCHIATRY WORKSHOP",
+      "title": "MIND PALACE ARCADE",
+      "subtitle": "PSYCHIATRY STRATEGY WORKSHOP",
       "conductedBy": "DEPT. OF PSYCHIATRY, GKMCH",
       "date": "26/9/25, Friday",
       "time": "09:00 AM - 10:00 AM ; 10:30 AM - 01:00 PM",
@@ -293,8 +293,8 @@
 
     {
       "id": "chromosomata-illuminata",
-      "title": "CHROMOSOMATA ILLUMINATA",
-      "subtitle": "GENETICS WORKSHOP",
+      "title": "GENOME GLITCH LAB",
+      "subtitle": "GENETICS PUZZLE WORKSHOP",
       "conductedBy": "DEPT OF ANATOMY, GKMCH JOINTLY WITH THE CLINICAL CELLULAR & MOLECULAR GENETICS AND TRANSLATIONAL RESEARCH CLUB",
       "date": "26/9/25, Friday",
       "time": "9:00 AM - 3:00 PM",

@@ -1,22 +1,19 @@
-import { useCallback } from "react";
-import Particles from "react-tsparticles";
-import { loadSlim } from "tsparticles-slim";
-
-// Import JSON config from src/
-import options from "../particles-boxes-vibrant.json"; 
-// or "../particles-boxes-subtle.json"
-
 export default function ParticlesBackground() {
-  const init = useCallback(async (engine) => {
-    await loadSlim(engine);
-  }, []);
-
   return (
-    <Particles
-      id="tsparticles"
-      init={init}
-      options={options}
-      className="pointer-events-none absolute inset-0"
-    />
+    <div className="retro-world pointer-events-none absolute inset-0" aria-hidden="true">
+      <div className="retro-layer retro-sky-stars" />
+      <div className="retro-layer retro-cloud retro-cloud-one" />
+      <div className="retro-layer retro-cloud retro-cloud-two" />
+      <div className="retro-layer retro-cloud retro-cloud-three" />
+      <div className="retro-layer retro-mountains" />
+      <div className="retro-layer retro-forest" />
+      <div className="retro-layer retro-water" />
+
+      <div className="retro-sprite retro-coin coin-one" />
+      <div className="retro-sprite retro-coin coin-two" />
+      <div className="retro-sprite retro-coin coin-three" />
+      <div className="retro-sprite retro-ghost ghost-one" />
+      <div className="retro-sprite retro-ghost ghost-two" />
+    </div>
   );
 }

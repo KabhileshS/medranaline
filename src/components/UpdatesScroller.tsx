@@ -1,117 +1,190 @@
-import { useState, useEffect } from "react";
-import { Card } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Content } from "vaul";
+// import { useState, useEffect } from "react";
+// import { Card } from "@/components/ui/card";
+// import { Badge } from "@/components/ui/badge";
+// import { Content } from "vaul";
 
-const UpdatesScroller = () => {
-  const [currentUpdate, setCurrentUpdate] = useState(0);
+// const UpdatesScroller = () => {
+//   const [currentUpdate, setCurrentUpdate] = useState(0);
 
-  const updates = [
-    {
-      date: "2025-09-05",
-      title: "Registration Opens Soon!",
-      content:
-        "Workshop registrations will begin on September 5th, 2025. Stay tuned for exciting medical workshops and competitions!",
-      type: "announcement",
-    },
-    {
-      date: "2025-09-04",
-      title: "Venue Confirmed",
-      content:
-        "Medrenaline'25 will be held at the Govt. Kilpauk Medical College campus. All events, workshops, and competitions in one location!",
-      type: "info",
-    },
-    {
-      date: "2025-09-04",
-      title: "Call for Sponsors",
-      content:
-        "We're looking for sponsors to make Medrenaline'25 even bigger! Contact us for partnership opportunities.",
-      type: "opportunity",
-    },
-    {
-      date: "2025-09-05",
-      title : "Brochure is Out Now ! ",
-      Content : "Medrenaline’25 brochure is out now and registrations are open: https://drive.google.com/drive/folders/1iMbuYQsTyHr9O9_rvtKa6fRRlDUs0G6F - Register Now!",
-      type: "announcement",
-    },
+//   const updates = [
+//     {
+//       date: "2025-09-05",
+//       title: "Registration Opens Soon!",
+//       content:
+//         "Workshop registrations will begin on September 5th, 2025. Stay tuned for exciting medical workshops and competitions!",
+//       type: "announcement",
+//     },
+//     {
+//       date: "2025-09-04",
+//       title: "Venue Confirmed",
+//       content:
+//         "Medrenaline'25 will be held at the Govt. Kilpauk Medical College campus. All events, workshops, and competitions in one location!",
+//       type: "info",
+//     },
+//     {
+//       date: "2025-09-04",
+//       title: "Call for Sponsors",
+//       content:
+//         "We're looking for sponsors to make Medrenaline'25 even bigger! Contact us for partnership opportunities.",
+//       type: "opportunity",
+//     },
+//     {
+//       date: "2025-09-05",
+//       title : "Brochure is Out Now ! ",
+//       Content : "Medrenaline’25 brochure is out now and registrations are open: https://drive.google.com/drive/folders/1iMbuYQsTyHr9O9_rvtKa6fRRlDUs0G6F - Register Now!",
+//       type: "announcement",
+//     },
     
+//   ];
+
+//   useEffect(() => {
+//     const interval = setInterval(() => {
+//       setCurrentUpdate((prev) => (prev + 1) % updates.length);
+//     }, 4000);
+
+//     return () => clearInterval(interval);
+//   }, [updates.length]);
+
+//   const getTypeColor = (type: string) => {
+//     switch (type) {
+//       case "announcement":
+//         return "bg-gradient-to-r from-red-500 to-yellow-500";
+//       case "info":
+//         return "bg-gradient-to-r from-blue-500 to-cyan-400";
+//       case "opportunity":
+//         return "bg-gradient-to-r from-green-400 to-lime-300";
+//       default:
+//         return "bg-gray-300";
+//     }
+//   };
+
+//   return (
+//     <div className="w-full max-w-2xl mx-auto">
+//       <h3 className="text-xl font-semibold mb-4 text-center">Latest Updates</h3>
+
+// <Card className="relative overflow-hidden p-4 min-h-[180px]">
+//   <div
+//     className="flex transition-transform duration-500 ease-in-out"
+//     style={{
+//       transform: `translateX(-${currentUpdate * (100 / updates.length)}%)`,
+//       width: `${updates.length * 100}%`,
+//     }}
+//   >
+//     {updates.map((update, index) => (
+//       <div
+//         key={index}
+//         className="flex-shrink-0 px-2"
+//         style={{ width: `${100 / updates.length}%` }} // Adjust width per visible item
+//       >
+//         <div className="flex items-start gap-3 bg-white p-3 rounded-lg shadow-sm">
+//           <Badge
+//             className={`${getTypeColor(update.type)} text-white shrink-0`}
+//           >
+//             {update.type.toUpperCase()}
+//           </Badge>
+//           <div className="flex-1">
+//             <div className="flex items-center justify-between mb-1">
+//               <h4 className="font-semibold text-lg">{update.title}</h4>
+//               <span className="text-sm text-gray-400">
+//                 {new Date(update.date).toLocaleDateString()}
+//               </span>
+//             </div>
+//             <p className="text-gray-500 leading-relaxed text-sm">
+//               {update.content}
+//             </p>
+//           </div>
+//         </div>
+//       </div>
+//     ))}
+//   </div>
+
+//   {/* Progress indicators */}
+//   <div className="flex justify-center gap-2 mt-4">
+//     {updates.map((_, index) => (
+//       <button
+//         key={index}
+//         className={`w-2 h-2 rounded-full transition-colors ${
+//           index === currentUpdate ? "bg-blue-500" : "bg-gray-300"
+//         }`}
+//         onClick={() => setCurrentUpdate(index)}
+//       />
+//     ))}
+//   </div>
+// </Card>
+
+//     </div>
+//   );
+// };
+
+// export default UpdatesScroller;
+
+import { useEffect, useState } from "react";
+import { Bell } from "lucide-react";
+
+const UpdatesScroller: React.FC = () => {
+  const [currentIndex, setCurrentIndex] = useState<number>(0);
+  
+  // MOCK updates data
+  const updates: string[] = [
+    "Registration opens for all events - Don't miss out!",
+    "Workshop slots filling fast - Register now!",
+    "Early bird discount available till March 1st",
+    "Special guest speakers announced - Check events page",
+    "Accommodation bookings now open",
+    "New events added - Medical Debate & Research Symposium"
   ];
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentUpdate((prev) => (prev + 1) % updates.length);
+      setCurrentIndex((prev) => (prev + 1) % updates.length);
     }, 4000);
 
     return () => clearInterval(interval);
   }, [updates.length]);
 
-  const getTypeColor = (type: string) => {
-    switch (type) {
-      case "announcement":
-        return "bg-gradient-to-r from-red-500 to-yellow-500";
-      case "info":
-        return "bg-gradient-to-r from-blue-500 to-cyan-400";
-      case "opportunity":
-        return "bg-gradient-to-r from-green-400 to-lime-300";
-      default:
-        return "bg-gray-300";
-    }
-  };
-
   return (
-    <div className="w-full max-w-2xl mx-auto">
-      <h3 className="text-xl font-semibold mb-4 text-center">Latest Updates</h3>
-
-<Card className="relative overflow-hidden p-4 min-h-[180px]">
-  <div
-    className="flex transition-transform duration-500 ease-in-out"
-    style={{
-      transform: `translateX(-${currentUpdate * (100 / updates.length)}%)`,
-      width: `${updates.length * 100}%`,
-    }}
-  >
-    {updates.map((update, index) => (
-      <div
-        key={index}
-        className="flex-shrink-0 px-2"
-        style={{ width: `${100 / updates.length}%` }} // Adjust width per visible item
-      >
-        <div className="flex items-start gap-3 bg-white p-3 rounded-lg shadow-sm">
-          <Badge
-            className={`${getTypeColor(update.type)} text-white shrink-0`}
-          >
-            {update.type.toUpperCase()}
-          </Badge>
-          <div className="flex-1">
-            <div className="flex items-center justify-between mb-1">
-              <h4 className="font-semibold text-lg">{update.title}</h4>
-              <span className="text-sm text-gray-400">
-                {new Date(update.date).toLocaleDateString()}
-              </span>
-            </div>
-            <p className="text-gray-500 leading-relaxed text-sm">
-              {update.content}
-            </p>
+    <div className="updates-scroll p-6 rounded-lg relative overflow-hidden">
+      <div className="flex items-center gap-4">
+        <div className="flex-shrink-0">
+          <div className="w-12 h-12 bg-cyan-400 rounded-md flex items-center justify-center border-4 border-cyan-600 animate-pulse">
+            <Bell className="h-6 w-6 text-slate-900" />
           </div>
         </div>
+        
+        <div className="flex-1">
+          <h3 className="text-lg font-bold text-yellow-300 mb-2" style={{ fontFamily: "'Press Start 2P', cursive", fontSize: '12px' }}>
+            LATEST UPDATES
+          </h3>
+          <div className="relative h-8 overflow-hidden">
+            <div 
+              className="transition-all duration-500 ease-in-out"
+              style={{ transform: `translateY(-${currentIndex * 32}px)` }}
+            >
+              {updates.map((update, index) => (
+                <p 
+                  key={index}
+                  className="text-xl md:text-2xl text-cyan-100 h-8 leading-8" 
+                  style={{ fontFamily: "'VT323', monospace" }}
+                >
+                  ➤ {update}
+                </p>
+              ))}
+            </div>
+          </div>
+        </div>
+        
+        {/* Indicator dots */}
+        <div className="flex-shrink-0 flex flex-col gap-2">
+          {updates.map((_, index) => (
+            <div
+              key={index}
+              className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                index === currentIndex ? 'bg-yellow-400 scale-125' : 'bg-slate-600'
+              }`}
+            />
+          ))}
+        </div>
       </div>
-    ))}
-  </div>
-
-  {/* Progress indicators */}
-  <div className="flex justify-center gap-2 mt-4">
-    {updates.map((_, index) => (
-      <button
-        key={index}
-        className={`w-2 h-2 rounded-full transition-colors ${
-          index === currentUpdate ? "bg-blue-500" : "bg-gray-300"
-        }`}
-        onClick={() => setCurrentUpdate(index)}
-      />
-    ))}
-  </div>
-</Card>
-
     </div>
   );
 };

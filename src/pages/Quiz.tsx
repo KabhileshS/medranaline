@@ -23,29 +23,26 @@ const QuizPage = () => {
   }, []);
 
   return (
-    <div className="relative min-h-screen text-slate-900">
+    <div className="relative min-h-screen text-slate-100">
       {/* Navbar */}
       <div className="relative z-[2000]">
         <Navigation />
       </div>
 
       {/* Particles */}
-      <div className="fixed inset-0 z-[1000] pointer-events-none">
+      <div className="fixed inset-0 z-[-10] pointer-events-none">
         <ParticlesBackground />
       </div>
 
       {/* Page Content */}
-      <main className="relative z-10">
+      <main className="relative z-[100]">
         {/* Title Section */}
         <section className="pt-28 pb-10 text-center">
-          <h1
-            className="text-3xl md:text-4xl font-extrabold mb-4 tracking-wide 
-                         bg-gradient-to-r from-blue-600 to-pink-500 bg-clip-text text-transparent"
-          >
-            Medrenaline'25 Quiz Competitions
+          <h1 className="text-3xl md:text-5xl font-extrabold mb-4 tracking-wide text-yellow-300">
+            Quiz Arena
           </h1>
-          <p className="text-base md:text-lg max-w-2xl mx-auto text-slate-700">
-            Click on a competition card for details and registration.
+          <p className="text-2xl max-w-2xl mx-auto text-cyan-100" style={{ fontFamily: "VT323, monospace" }}>
+            Enter your squad and challenge the boss rounds.
           </p>
         </section>
 
@@ -57,14 +54,14 @@ const QuizPage = () => {
               <div
                 key={quiz.id}
                 onClick={() => setSelectedQuiz(quiz)}
-                className="relative rounded-2xl overflow-hidden shadow-lg w-80 h-[380px] transform transition duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer"
+                className="retro-event-card relative overflow-hidden w-80 h-[380px] transform transition duration-300 hover:scale-105 cursor-pointer"
               >
                 <div className="relative w-full h-full bg-white">
                   {/* Background Image */}
                   <img
                     src={quiz.image || "/placeholder.svg"}
                     alt={quiz.title}
-                    className="absolute inset-0 w-full h-full object-cover"
+                    className="absolute inset-0 w-full h-full object-cover retro-pixel-image"
                   />
                   {/* Overlay */}
                   <div className="absolute inset-0 bg-black/40 flex flex-col justify-center p-6">

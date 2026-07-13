@@ -7,7 +7,7 @@ import ParticlesBackground from "@/components/ParticlesBackground";
 
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Stethoscope, Brain, Users } from "lucide-react";
+import { Stethoscope, Brain, Users, ScrollText, Sparkles, Hotel } from "lucide-react";
 
 import medLogo from "@/assets/med-logo.png";
 import collegeImg from "@/assets/college.jpg";
@@ -36,26 +36,44 @@ const Index = () => {
     {
       icon: Stethoscope,
       title: "Workshops",
-      subtitle:
-        "Hands On learning with experts in the field and latest technology.",
+      subtitle: "Hands-on quests and skill power-ups.",
       path: "/workshops",
-      color: "text-blue-600",
+      color: "text-cyan-300",
     },
     {
       icon: Brain,
       title: "Quiz",
-      subtitle:
-        " Compete with the best minds around the nation and reign the throne.",
+      subtitle: "Compete for the top leaderboard score.",
       path: "/quiz",
-      color: "text-pink-600",
+      color: "text-fuchsia-300",
     },
     {
       icon: Users,
-      title: "Other Events",
-      subtitle:
-        "Participate in Various Case and Research Presentation to showcase to the world, your findings.",
-      path: "/other-events",
-      color: "text-teal-600",
+      title: "Presentation",
+      subtitle: "Case and research showcase arena.",
+      path: "/presentation",
+      color: "text-emerald-300",
+    },
+    {
+      icon: Sparkles,
+      title: "Symposium",
+      subtitle: "Story-driven talks and themed sessions.",
+      path: "/symposium",
+      color: "text-yellow-300",
+    },
+    {
+      icon: ScrollText,
+      title: "Literary Events",
+      subtitle: "Debate rounds and verbal battles.",
+      path: "/literary-events",
+      color: "text-orange-300",
+    },
+    {
+      icon: Hotel,
+      title: "Food + Accommodation",
+      subtitle: "Fuel, stay and continue the run.",
+      path: "/food-accommodation",
+      color: "text-violet-300",
     },
   ];
 
@@ -75,14 +93,14 @@ const Index = () => {
   ];
 
   return (
-    <div className="relative min-h-screen text-slate-900">
+    <div className="relative min-h-screen text-slate-100">
       {/* Navbar */}
       <div className="relative z-[2000]">
         <Navigation />
       </div>
 
       {/* Particles */}
-      <div className="fixed inset-0 z-[1000] pointer-events-none">
+      <div className="fixed inset-0 z-[-10] pointer-events-none">
         <ParticlesBackground />
       </div>
 
@@ -92,32 +110,27 @@ const Index = () => {
           <div className="mb-2">
             <img
               src={medLogo}
-              alt="Medrenaline '25"
+              alt="Medrenaline '26"
               className="mx-auto w-72 sm:w-96 md:w-[28rem] lg:w-[32rem] object-contain"
               loading="lazy"
             />
           </div>
 
-          <p
-            className="text-3xl md:text-4xl mb-2 font-bold text-slate-900"
-            style={{ fontFamily: "'Fopi Rush', cursive" }}
-          >
-            <span className="text-red-600">Feel</span>{" "}
-            <span className="text-pink-600">the Rush</span>
+          <p className="text-3xl md:text-4xl mb-2 font-bold text-yellow-300" style={{ fontFamily: "'Press Start 2P', cursive" }}>
+            Ready Player Medraline
           </p>
 
-          <p className="text-lg md:text-xl mb-4 max-w-2xl mx-auto text-slate-700">
-            Join us for three days of medical excellence, innovation, and
-            celebration at Govt. Kilpauk Medical College
+          <p className="text-2xl mb-4 max-w-2xl mx-auto text-cyan-100" style={{ fontFamily: "'VT323', monospace" }}>
+            Dive into a pixel universe of workshops, quizzes, presentations,
+            symposiums, and literary arenas.
           </p>
 
           {/* Buttons */}
           <div className="flex flex-col sm:flex-row gap-3 justify-center mb-4">
             <Button
               size="lg"
-              variant="gradient-hero"
-              className="button-one"
-              onClick={() => navigate("/workshops")}
+              className="retro-cta text-sm px-8 py-6"
+              onClick={() => navigate("/events")}
             >
               Register Now
             </Button>
@@ -143,17 +156,17 @@ const Index = () => {
       <section className="py-16 relative">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-white/30 backdrop-blur-md shadow-lg rounded-2xl p-10">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-slate-900">
-                About Medrenaline 2025
+            <div className="retro-panel p-10">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-yellow-300">
+                About Medrenaline 2026
               </h2>
-              <p className="text-lg mb-6 leading-relaxed text-slate-700">
+              <p className="text-2xl mb-6 leading-relaxed text-slate-100" style={{ fontFamily: "'VT323', monospace" }}>
                 Medrenaline is the flagship annual intercollegiate academic
                 extravaganza of the esteemed Kilpauk Medical College (KMC),
                 drawing hundreds of bright medical minds from institutions
                 across Tamil Nadu.
               </p>
-              <p className="text-lg mb-6 leading-relaxed text-slate-700">
+              <p className="text-2xl mb-6 leading-relaxed text-slate-100" style={{ fontFamily: "'VT323', monospace" }}>
                 Spanning over three vibrant days, Medrenaline is a celebration of
                 medical intellect and curiosity – featuring an array of engaging
                 events that cater to every academic pursuit. From captivating
@@ -163,7 +176,7 @@ const Index = () => {
                 training under the guidance of seasoned professionals –
                 Medrenaline is a true academic odyssey.
               </p>
-              <p className="text-lg leading-relaxed text-slate-700">
+              <p className="text-2xl leading-relaxed text-slate-100" style={{ fontFamily: "'VT323', monospace" }}>
                 We are proud to welcome you to the 12th edition of this ocean of
                 knowledge. Come, dive into the current – compete with the
                 finest, learn with the best, and rise above the rest.
@@ -176,19 +189,18 @@ const Index = () => {
       {/* Highlights */}
       <section className="py-12">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {highlights.map((item, index) => (
               <Card
                 key={index}
                 onClick={() => navigate(item.path)}
-                className="p-6 bg-gray-100 shadow-md text-slate-900 cursor-pointer 
-                            hover:shadow-xl transform hover:-translate-y-2 transition duration-300 text-center"
+                className="retro-event-card p-6 text-slate-50 cursor-pointer text-center"
               >
                 <item.icon
                   className={`h-12 w-12 ${item.color} mb-4 mx-auto`}
                 />
-                <h3 className="text-xl font-semibold mb-3">{item.title}</h3>
-                <p className="text-slate-600">{item.subtitle}</p>
+                <h3 className="text-base font-semibold mb-3 text-yellow-200">{item.title}</h3>
+                <p className="text-xl text-slate-100" style={{ fontFamily: "'VT323', monospace" }}>{item.subtitle}</p>
               </Card>
             ))}
           </div>
@@ -198,22 +210,22 @@ const Index = () => {
       {/* About KMC */}
       <section className="py-16 relative">
         <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-0 items-stretch bg-white/40 backdrop-blur-md rounded-3xl shadow-xl overflow-hidden">
+          <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-0 items-stretch retro-panel overflow-hidden">
             {/* Left Side - Image */}
             <div className="w-full h-full">
               <img
                 src={collegeImg}
                 alt="Kilpauk Medical College"
-                className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                className="w-full h-full object-cover retro-pixel-image hover:scale-105 transition-transform duration-500"
               />
             </div>
 
             {/* Right Side - Content */}
-            <div className="p-10 text-slate-900 flex flex-col justify-center">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-red-500 to-blue-600 bg-clip-text text-transparent">
+            <div className="p-10 text-slate-100 flex flex-col justify-center">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-yellow-300">
                 About KMC
               </h2>
-              <p className="text-lg mb-6 leading-relaxed text-slate-700">
+              <p className="text-2xl mb-6 leading-relaxed text-slate-100" style={{ fontFamily: "'VT323', monospace" }}>
                 Since its founding in 1960, Government Kilpauk Medical College
                 has stood as a paragon of medical excellence, shaping
                 generations of physicians with intellect, integrity, and purpose.
@@ -222,7 +234,7 @@ const Index = () => {
                 legacy, accomplished alumni, and unwavering commitment to
                 academic and clinical distinction.
               </p>
-              <p className="text-lg leading-relaxed text-slate-700">
+              <p className="text-2xl leading-relaxed text-slate-100" style={{ fontFamily: "'VT323', monospace" }}>
                 With a student-focused environment, exceptional faculty, and a
                 vibrant academic culture, KMC empowers students to excel in
                 medicine, research, and innovation. Ever attuned to the
@@ -238,18 +250,18 @@ const Index = () => {
       {/* Sponsors */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-slate-900">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-yellow-300">
             Our Previous Sponsors
           </h2>
           <div className="overflow-hidden">
             <div className="flex animate-scroll-x">
               {sponsors.concat(sponsors).map((sponsor, index) => (
                 <div key={index} className="flex-shrink-0 mx-6">
-                  <Card className="w-40 h-40 flex items-center justify-center bg-white shadow-md rounded-xl overflow-hidden hover:scale-105 transition-transform duration-300">
+                  <Card className="w-40 h-40 flex items-center justify-center bg-slate-950/95 shadow-md rounded-none overflow-hidden hover:scale-105 transition-transform duration-300 border-4 border-yellow-200">
                     <img
                       src={sponsor}
                       alt={`Sponsor ${index + 1}`}
-                      className="max-w-full max-h-full object-contain p-2"
+                      className="max-w-full max-h-full object-contain p-2 retro-pixel-image"
                       loading="lazy"
                     />
                   </Card>
@@ -263,7 +275,7 @@ const Index = () => {
       {/* Map */}
       <section className="py-12">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-8 text-slate-900">
+          <h2 className="text-3xl font-bold text-center mb-8 text-yellow-300">
             Find Us
           </h2>
           <div className="rounded-2xl overflow-hidden shadow-lg max-w-5xl mx-auto transform transition duration-500 hover:scale-[1.02] hover:shadow-2xl hover:shadow-blue-400/50">

@@ -41,12 +41,12 @@ const PrevEditions = () => {
       </div>
 
       {/* Particles in background */}
-      <div className="fixed inset-0 z-[1000] pointer-events-none">
+      <div className="fixed inset-0 z-[-10] pointer-events-none">
         <ParticlesBackground />
       </div>
 
       {/* Main Content */}
-      <main className="relative z-10 max-w-7xl mx-auto px-6 pt-28 pb-16">
+      <main className="relative z-[100] max-w-7xl mx-auto px-6 pt-28 pb-16">
         {/* 👆 Added pt-28 for spacing under navbar */}
 
         <h1 className="text-4xl font-bold text-center mb-12 text-indigo-900">

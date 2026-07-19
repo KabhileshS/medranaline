@@ -1,101 +1,149 @@
 import { useNavigate } from "react-router-dom";
-import {
-  BookOpenText,
-  Brain,
-  Hotel,
-  Joystick,
-  Presentation,
-  ScrollText,
-  Sparkles,
-} from "lucide-react";
-
+import { Stethoscope, Brain, Users, ScrollText, Sparkles, Hotel } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import { Card } from "../components/ui/card";
 
-const eventTiles = [
-  { title: "Workshop Worlds", subtitle: "Retro skill quests", route: "/workshops", icon: Joystick, color: "from-fuchsia-500 to-indigo-600" },
-  { title: "Quiz Arena", subtitle: "Boss battle of brains", route: "/quiz", icon: Brain, color: "from-emerald-400 to-cyan-500" },
-  { title: "Symposium Stage", subtitle: "Talks + themed sessions", route: "/symposium", icon: Sparkles, color: "from-orange-400 to-red-600" },
-  { title: "Presentation Pit", subtitle: "Case and research showcases", route: "/presentation", icon: Presentation, color: "from-blue-400 to-sky-600" },
-  { title: "Literary Lane", subtitle: "Debate and word battles", route: "/literary-events", icon: ScrollText, color: "from-amber-400 to-yellow-600" },
-  { title: "Food + Stay", subtitle: "Fuel, rest, and continue", route: "/food-accommodation", icon: Hotel, color: "from-violet-400 to-purple-700" },
-];
+// const eventTiles = [
+//   { title: "Workshop Worlds", subtitle: "Retro skill quests", route: "/workshops", icon: Joystick, color: "from-fuchsia-600 to-indigo-800" },
+//   { title: "Quiz Arena", subtitle: "Boss battle of brains", route: "/quiz", icon: Brain, color: "from-emerald-500 to-cyan-600" },
+//   { title: "Symposium Stage", subtitle: "Talks + themed sessions", route: "/other-events", icon: Sparkles, color: "from-orange-500 to-red-700" },
+//   { title: "Presentation Pit", subtitle: "Case and research showcases", route: "/other-events", icon: Presentation, color: "from-blue-500 to-sky-700" },
+//   { title: "Literary Lane", subtitle: "Debate and word battles", route: "/other-events", icon: ScrollText, color: "from-amber-500 to-yellow-600" },
+//   { title: "Food + Stay", subtitle: "Fuel, rest, and continue", route: "/accommodation", icon: Hotel, color: "from-violet-500 to-purple-800" },
+// ];
 
 const EventsHub = () => {
   const navigate = useNavigate();
 
+    const highlights = [
+      {
+        icon: Stethoscope,
+        title: "Workshops",
+        subtitle: "Hands-on quests and skill power-ups.",
+        path: "/workshops",
+        color: "text-cyan-300",
+      },
+      {
+        icon: Brain,
+        title: "Quiz",
+        subtitle: "Compete for the top leaderboard score.",
+        path: "/quiz",
+        color: "text-fuchsia-300",
+      },
+      {
+        icon: Users,
+        title: "Presentation",
+        subtitle: "Case and research showcase arena.",
+        path: "/other-events",
+        color: "text-emerald-300",
+      },
+      {
+        icon: Sparkles,
+        title: "Symposium",
+        subtitle: "Story-driven talks and themed sessions.",
+        path: "/other-events",
+        color: "text-yellow-300",
+      },
+      {
+        icon: ScrollText,
+        title: "Literary Events",
+        subtitle: "Debate rounds and verbal battles.",
+        path: "/other-events",
+        color: "text-orange-300",
+      },
+      {
+        icon: Hotel,
+        title: "Food + Accommodation",
+        subtitle: "Fuel, stay and continue the run.",
+        path: "/accommodation",
+        color: "text-violet-300",
+      },
+    ];
+
   return (
-    <div className="relative min-h-screen text-slate-100 overflow-x-hidden bg-slate-950">
+    <div className="sonic-bg min-h-screen text-slate-100 overflow-x-hidden relative">
       
-      {/* HEADER: Cobalt blue bar with explicit top stacking context */}
-      <div className="relative z-[2000] border-b-4 border-yellow-500 shadow-lg">
+      {/* HEADER */}
+      <div className="relative z-[2000]">
         <Navigation />
       </div>
 
-      {/* FIXED VISUAL ENVIRONMENT: Pushed cleanly behind active buttons */}
+      {/* FIXED VISUAL ENVIRONMENT BACKGROUND SCENERY */}
       <div className="fixed inset-0 z-0 pointer-events-none select-none">
-        {/* Sky Stars & Clouds from your global index definitions */}
         <div className="retro-sky-stars absolute inset-0 opacity-40" />
         <div className="retro-cloud retro-cloud-one absolute left-10 opacity-30" />
         <div className="retro-cloud retro-cloud-two absolute right-20 opacity-20" />
         
-        {/* Continuous Level-End Landscape Grid pinned to the bottom screen canvas */}
+        {/* Pinned Landscape Track Elements */}
         <div className="absolute bottom-0 left-0 w-full h-[24vh] flex flex-col justify-end">
-          {/* Animated Water Row */}
           <div className="retro-water w-full h-8" />
-          {/* Checkerboard soil line */}
           <div className="sonic-checkerboard-floor w-full h-32" />
         </div>
       </div>
 
       {/* CORE CONTENT CANVAS LAYER */}
-      <main className="relative z-10 pt-28 pb-48 px-4 max-w-6xl mx-auto">
+      <main className="relative z-10 pt-28 pb-48 px-6 max-w-6xl mx-auto flex flex-col items-center">
         
-        {/* Header Board Panel against semi-transparent "dark space" container */}
-        <section className="bg-slate-950/85 border-4 border-slate-800 p-6 md:p-8 shadow-[0_8px_0_#020617]">
-          <p className="text-sm text-cyan-300 font-bold mb-2 tracking-[0.2em] font-mono">SELECT YOUR LEVEL</p>
-          <h1 className="sonic-text-bevel text-3xl md:text-5xl font-black leading-tight mb-4 tracking-wide font-sans">
+        {/* Main Board Panel */}
+        <section className="bg-[#1e1e3a]/90 backdrop-blur-sm border-4 border-slate-700 p-6 md:p-8 shadow-2xl rounded-lg w-full text-center flex flex-col items-center">
+          <p 
+            className="text-cyan-300 font-bold mb-4 tracking-[0.2em]" 
+            style={{ fontFamily: "'Press Start 2P', cursive", fontSize: '10px' }}
+          >
+            SELECT YOUR LEVEL
+          </p>
+          <h1 
+            className="text-3xl md:text-5xl font-bold leading-tight mb-4 tracking-wide text-yellow-300 pixel-glow-text"
+            style={{ fontFamily: "'Press Start 2P', cursive" }}
+          >
             MEDRALINE EVENT ARCADE
           </h1>
-          <p className="text-xl md:text-2xl text-blue-200 font-normal font-mono" style={{ fontFamily: "VT323, monospace" }}>
-            Pick a zone and register. Every tile is a different playable route.
+          <p 
+            className="text-2xl text-slate-200 max-w-2xl mx-auto" 
+            style={{ fontFamily: "'VT323', monospace" }}
+          >
+            Pick a zone and register. Every tile acts as a different playable route.
           </p>
         </section>
 
-        {/* HIGH-ENERGY CALL TO ACTION ELEMENT */}
+        {/* HIGH-ENERGY ARCADIC CALL TO ACTION */}
         <div className="flex justify-center my-10">
-          <button className="px-8 py-3 bg-gradient-to-r from-magenta-500 to-purple-600 rounded-full border-4 border-yellow-300 text-white font-bold tracking-widest shadow-sonic-neon hover:scale-105 active:translate-y-1 transition-all duration-75 uppercase">
+          <button 
+            onClick={() => navigate("/quiz")}
+            className="px-8 py-2 bg-blue-600 hover:bg-blue-700 text-white font-bold border-4 border-yellow-400 text-xl shadow-2xl transform active:scale-95 transition-transform"
+            style={{ fontFamily: "'Press Start 2P', cursive", fontSize: '14px' }}
+          >
             GET THE RUSH
           </button>
         </div>
 
-        {/* INTERACTIVE LEVEL ROUTES GRID */}
-        <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {eventTiles.map((tile) => (
-            <button
-              key={tile.title}
-              type="button"
-              onClick={() => navigate(tile.route)}
-              className="retro-event-card text-left p-0 overflow-hidden group hover:-translate-y-2 transition-transform duration-100 cursor-pointer"
-            >
-              {/* Card Banner */}
-              <div className={`h-28 bg-gradient-to-r ${tile.color} px-5 py-4 flex items-center justify-between border-b-4 border-slate-950`}>
-                <tile.icon className="h-12 w-12 text-white drop-shadow-md animate-pulse" />
-                <div className="sonic-loop-accent" />
-              </div>
-              
-              {/* Card Body - Opaque Solid Background color ensures graphics don't run through text */}
-              <div className="px-5 py-5 bg-slate-900 border-t border-slate-800">
-                <h2 className="text-lg text-yellow-300 font-bold mb-1 tracking-wide">{tile.title}</h2>
-                <p className="text-lg text-slate-300 font-mono" style={{ fontFamily: "VT323, monospace" }}>
-                  {tile.subtitle}
-                </p>
-              </div>
-            </button>
-          ))}
-        </section>
-      </main>
+      {/* Highlights */}
+      <section className="py-12">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-10 text-yellow-300" style={{ fontFamily: "'Press Start 2P', cursive" }}>
+            Event Zones
+          </h2>
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {highlights.map((item, index) => (
+              <Card
+                key={index}
+                onClick={() => navigate(item.path)}
+                className="retro-event-card p-6 text-slate-50 cursor-pointer text-center"
+              >
+                <item.icon
+                  className={`h-12 w-12 ${item.color} mb-4 mx-auto`}
+                />
+                <h3 className="text-lg font-semibold mb-3 text-yellow-200" style={{ fontFamily: "'Press Start 2P', cursive", fontSize: '12px' }}>{item.title}</h3>
+                <p className="text-xl md:text-2xl text-slate-100" style={{ fontFamily: "'VT323', monospace" }}>{item.subtitle}</p>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+     </main>
 
+      {/* Footer */}
       <Footer />
     </div>
   );

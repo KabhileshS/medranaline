@@ -106,10 +106,13 @@ const Navigation: React.FC = () => {
 
   const navItems: NavItem[] = [
     { name: "HOME", path: "/home" },
-    { name: "EVENTS", path: "/events" },
-    { name: "ABOUT", path: "/home#about" },
-    { name: "CONTACT", path: "/contact" },
+    // { name: "EVENTS", path: "/events" },
+    { name: "WORKSHOPS", path: "/workshops" },
+    { name: "QUIZ", path: "/quiz" },
     { name: "OTHER EVENTS", path: "/other-events" },
+    { name: "ACCOMMODATION", path: "/accommodation" },
+    { name: "PREV EDITIONS", path: "/prev-editions" },
+    { name: "CONTACT", path: "/contact" },
   ];
 
   const isActive = (path: string): boolean => location.pathname === path;
@@ -121,9 +124,9 @@ const Navigation: React.FC = () => {
           {/* Logo */}
           <Link to="/home" className="flex items-center space-x-3">
             <div className="gold-bezel px-4 py-2 rounded-md flex items-center gap-2">
-              <div className="w-8 h-8 rounded-full bg-gradient-to-br from-blue-600 via-purple-600 to-pink-600 flex items-center justify-center border-2 border-yellow-300">
+              {/* <div className="w-8 h-8 rounded-full bg-gradient-to-br from-blue-600 via-purple-600 to-pink-600 flex items-center justify-center border-2 border-yellow-300">
                 <span className="text-sm font-bold text-white" style={{ fontFamily: "'Press Start 2P', cursive" }}>A</span>
-              </div>
+              </div> */}
               <h1
                 className="text-lg md:text-xl font-bold text-white tracking-wide"
                 style={{ fontFamily: "'Press Start 2P', cursive" }}

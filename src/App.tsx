@@ -58,9 +58,15 @@ import { Toaster } from "./components/ui/sonner";
 // Pages
 import StartScreen from "./pages/StartScreenS";
 import HomePage from "./pages/HomePage";
-import EventsPage from "./pages/EventsPage";
+// import EventsPage from "./pages/EventsPage";
 import ContactUs from "./pages/ContactUs";
 import OtherEvents from "./pages/OtherEvents";
+import Accommodation from "./pages/Accommodation";
+import PrevEditions from "./pages/PrevEditions";
+import QuizPage from "./pages/Quiz";
+import EventsHub from "./pages/EventsHub";
+import WorkshopPage from "./pages/Workshops";
+
 // const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
 // const API = `${BACKEND_URL}/api`;
 
@@ -91,9 +97,13 @@ function App(): typeof App.name extends string ? React.JSX.Element : never {
         <Routes>
           <Route path="/" element={<StartScreen />} />
           <Route path="/home" element={<HomePage />} />
-          <Route path="/events" element={<EventsPage />} />
+          <Route path="/events" element={<EventsHub />} />
           <Route path="/contact" element={<ContactUs />} />
           <Route path="/other-events" element={<OtherEvents />} />
+          <Route path="/accommodation" element={<Accommodation />} />
+          <Route path="/prev-editions" element={<PrevEditions />} />
+          <Route path="/quiz" element={<QuizPage />} />
+          <Route path="/workshops" element={<WorkshopPage />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </BrowserRouter>
